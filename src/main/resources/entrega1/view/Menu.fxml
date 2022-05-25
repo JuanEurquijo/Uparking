@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entrega2.co.uparking.solid.clean.aplicacion.agregados.MenuController">
+<AnchorPane prefHeight="400.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entrega2.co.uparking.solid.clean.aplicacion.agregados.MenuController">
     <children>
         <VBox prefHeight="400.0" prefWidth="172.0" style="-fx-background-color: #359EC5;">
             <children>
@@ -52,6 +52,9 @@
                         <Image url="@location.png" />
                      </image></ImageView>
                     </graphic>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
                 </Button>
             </children>
         </VBox>

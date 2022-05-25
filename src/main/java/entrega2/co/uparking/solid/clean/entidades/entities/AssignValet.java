@@ -24,9 +24,9 @@ public class AssignValet {
         service.changeState(valets.get(0));
         valets.remove(0);
 
-       /* assigned.entrySet().forEach(entry->{
+       assigned.entrySet().forEach(entry->{
             System.out.println(entry.getKey() + " = " + entry.getValue());
-        });*/
+        });
     }
 
     public Map<Cuenta, ValetParking> getAssigned() {

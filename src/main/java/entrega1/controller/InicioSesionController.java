@@ -6,6 +6,7 @@ package entrega1.controller;
 
 import entrega1.model.Cuenta;
 import entrega2.co.uparking.solid.clean.aplicacion.agregados.MenuController;
+import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.ICuentasDAO;
 import entrega2.co.uparking.solid.clean.infraestructura.oracle.CuentasDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +23,7 @@ import java.util.List;
 /**
  * FXML Controller class
  *
- * @author User
+ * @author Juan Urquijo
  */
 public class InicioSesionController{
 
@@ -37,7 +38,7 @@ public class InicioSesionController{
 
 
     List<Cuenta> cuentas = new ArrayList<>();
-    CuentasDAO model = new CuentasDAO();
+    ICuentasDAO model = new CuentasDAO();
     boolean encontrada = false;
 
     MenuController menu;

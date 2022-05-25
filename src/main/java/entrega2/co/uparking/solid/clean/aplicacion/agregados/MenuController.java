@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -47,6 +48,11 @@ public class MenuController {
 
         AssignValet valet = new AssignValet();
         valet.associateValet(this.user);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Información");
+        alert.setContentText("¡Se ha asignado un nuevo valet!");
+        alert.showAndWait();
 
     }
 

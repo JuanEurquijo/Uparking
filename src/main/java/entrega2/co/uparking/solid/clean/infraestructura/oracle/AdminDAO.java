@@ -1,11 +1,12 @@
 package entrega2.co.uparking.solid.clean.infraestructura.oracle;
+import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IAdminDAO;
 import entrega2.co.uparking.solid.clean.entidades.entities.Administrator;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminDAO {
+public class AdminDAO implements IAdminDAO {
 
     public List<Administrator> checkAccounts() {
         List<Administrator> admins = new ArrayList<>();

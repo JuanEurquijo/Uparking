@@ -1,12 +1,13 @@
 package entrega2.co.uparking.solid.clean.infraestructura.oracle;
 
 import entrega1.model.Cuenta;
+import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.ICuentasDAO;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CuentasDAO {
+public class CuentasDAO implements ICuentasDAO {
 
     public boolean insertAccount(Cuenta cuenta) {
 

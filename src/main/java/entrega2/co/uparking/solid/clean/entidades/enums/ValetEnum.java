@@ -1,6 +1,10 @@
 package entrega2.co.uparking.solid.clean.entidades.enums;
 
 public enum ValetEnum {
-    DISPONIBLE,
-    OCUPADO
+    DISPONIBLE("Disponible"),
+    OCUPADO("En Servicio");
+
+    ValetEnum(String string) {
+
+    }
 }

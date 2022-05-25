@@ -31,7 +31,7 @@ public class SignInAdminController {
 
     List<Administrator> cuentas = new ArrayList<>();
 
-    AdminDAO model = new AdminDAO();
+    IAdminDAO model = new AdminDAO();
 
     private boolean encontrada;
     @FXML
