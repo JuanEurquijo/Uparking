@@ -1,0 +1,6 @@
+cata,Cédula de Ciudadanía,1010960135,cata@gmail.com,cata
+Juan,Cédula de Ciudadanía,1010960198,juan@gmail.com,juan
+Cuenta{ID=0, user='Cata', tipoDoc='Cédula de Ciudadanía', document=1010555555, email='catalina@gmail.com', password='cata'}
+Cuenta{ID=0, user='Ana', tipoDoc='Cédula de Ciudadanía', document=1010325265, email='ana@hormail.com', password='Ana'}
+Cuenta{ID=0, user='Carlos4', tipoDoc='Cédula de Ciudadanía', document=1010658467, email='carlos@gmail.com', password='Carlos'}
+Cuenta{ID=0, user='Pedro', tipoDoc='Cédula de Ciudadanía', document=1010258164, email='pedro@gmail.com', password='pedro'}

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="panelRegistro" alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3F85DE;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entrega1.controller.RegistroVehiculoController">
+<VBox fx:id="panelRegistro" alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3F85DE;" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entrega1.controller.RegistroVehiculoController">
    <children>
       <Label text="Registro de Vehículo">
          <font>

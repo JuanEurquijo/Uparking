@@ -12,12 +12,11 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import entrega1.model.Cuenta;
+import entrega2.co.uparking.solid.clean.infraestructura.oracle.CuentasDAO;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -26,12 +25,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
- * @author User
+ * @author JuanEurquijo
  */
 public class RegistroUsuarioController implements Initializable{
     
@@ -65,6 +63,8 @@ public class RegistroUsuarioController implements Initializable{
      RegistroUsuarioController stage1;
      private boolean aceptado = true;
 
+     private CuentasDAO modelAccount = new CuentasDAO();
+
  
     public void cleanFields(){
         txtCorreo.setText("");
@@ -88,8 +88,7 @@ public class RegistroUsuarioController implements Initializable{
         cleanFields();
         mostrarContraseña(txtPassword, txtPasswordMask, checkViewPass);
         mostrarContraseña(txtConfirmPassword, txtConfirmPasswordMask, checkViewPass);
-        
-        
+
     }    
 
     @FXML
@@ -138,7 +137,7 @@ public class RegistroUsuarioController implements Initializable{
                                
                                 cuentas.add(account);
                                 
-                                if(InsertarCuenta(cuentas) && aceptado == true){
+                                if(modelAccount.insertAccount(account) && InsertarCuenta(cuentas) && aceptado == true){
                                     
                                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                                     alert.setHeaderText(null);
@@ -147,18 +146,7 @@ public class RegistroUsuarioController implements Initializable{
                                     alert.showAndWait();
                                   
                                     cleanFields();
-                                    
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("RegistroVehiculo.fxml"));
-                                    Scene scene = new Scene(loader.load());
-                                    Stage stage = new Stage();
-                                    stage.setScene(scene);
-                                    RegistroVehiculoController controlador = (RegistroVehiculoController) loader.getController();
-                                    controlador.recibirParametros(stage1, txtNombreUsuario.getText());
-                                    stage.show();
-                                    
-                                    
-                                    
-                                    
+
 
                                 }else{
 
@@ -217,6 +205,10 @@ public class RegistroUsuarioController implements Initializable{
         
    
     }
+
+
+
+
 
     @FXML
     private void CleanEvent(ActionEvent event) {

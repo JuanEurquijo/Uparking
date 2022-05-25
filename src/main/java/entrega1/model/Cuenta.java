@@ -10,12 +10,13 @@ package entrega1.model;
  */
 public class Cuenta {
     
-
+    private int ID;
     private String user;
     private String tipoDoc;
     private long document;
     private String email;
     private String password;
+
 
     public Cuenta() {
     }
@@ -68,14 +69,23 @@ public class Cuenta {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return user + "," + tipoDoc + "," + document + "," + email + "," + password;
+    public int getID() {
+        return ID;
     }
 
-    
-   
-    
-    
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "ID=" + ID +
+                ", user='" + user + '\'' +
+                ", tipoDoc='" + tipoDoc + '\'' +
+                ", document=" + document +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

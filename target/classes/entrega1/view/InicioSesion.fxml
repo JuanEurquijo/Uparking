@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -11,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="panelInicioSesion" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entrega1.controller.InicioSesionController">
+<VBox fx:id="panelInicioSesion" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entrega1.controller.InicioSesionController">
    <children>
       <Label text="Iniciar Sesión" textAlignment="CENTER" wrapText="true">
          <font>
@@ -43,15 +42,10 @@
                   <TextField fx:id="txtPasswordMask" prefHeight="32.0" promptText="Ej: 1234" visible="false" />
                </children>
             </StackPane>
-            <CheckBox fx:id="CheckViewPass" mnemonicParsing="false" text="Ver Contraseña">
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </CheckBox>
             <HBox alignment="TOP_CENTER">
                <children>
-                  <Button fx:id="btnIngresar" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Ingresar" textFill="WHITE" />
-                  <Button fx:id="btnLimpiarIng" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #144B96; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Limpiar" textFill="WHITE">
+                  <Button fx:id="btnIngresar" mnemonicParsing="false" onAction="#IniciarSesion" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Ingresar" textFill="WHITE" />
+                  <Button fx:id="btnLimpiarIng" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #144B96; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Limpiar" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
