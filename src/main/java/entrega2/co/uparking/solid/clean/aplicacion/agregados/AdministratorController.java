@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -113,7 +114,8 @@ public class AdministratorController implements Initializable {
 
     @FXML
     public void leaveRegister(ActionEvent actionEvent) {
-
+        Stage stage = (Stage) btnLeave.getScene().getWindow();
+        stage.close();
     }
 
     public void cleanFields(){
