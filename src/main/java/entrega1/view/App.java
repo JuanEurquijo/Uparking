@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * JavaFX App
@@ -16,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/entrega1/view/User.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/entrega1/view/User.fxml")));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

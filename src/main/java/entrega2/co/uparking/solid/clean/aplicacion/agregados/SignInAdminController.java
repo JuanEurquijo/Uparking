@@ -1,12 +1,8 @@
 package entrega2.co.uparking.solid.clean.aplicacion.agregados;
 
-import entrega1.model.Cuenta;
 import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IAdminDAO;
-import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IValetDAO;
 import entrega2.co.uparking.solid.clean.entidades.entities.Administrator;
 import entrega2.co.uparking.solid.clean.infraestructura.oracle.AdminDAO;
-import entrega2.co.uparking.solid.clean.infraestructura.oracle.CuentasDAO;
-import entrega2.co.uparking.solid.clean.infraestructura.oracle.ValetDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

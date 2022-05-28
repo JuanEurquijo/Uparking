@@ -1,11 +1,7 @@
 package entrega2.co.uparking.solid.clean.entidades.entities;
 
-import entrega1.model.Cuenta;
 import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IValetDAO;
 import entrega2.co.uparking.solid.clean.infraestructura.oracle.ValetDAO;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Administrator implements IValetDAO {
 

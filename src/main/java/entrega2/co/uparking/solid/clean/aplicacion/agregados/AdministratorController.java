@@ -1,23 +1,19 @@
 package entrega2.co.uparking.solid.clean.aplicacion.agregados;
 
-import entrega1.model.Cuenta;
-import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IValetDAO;
 import entrega2.co.uparking.solid.clean.entidades.entities.Administrator;
 import entrega2.co.uparking.solid.clean.entidades.entities.AssignValet;
 import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
-import entrega2.co.uparking.solid.clean.infraestructura.oracle.CuentasDAO;
-import entrega2.co.uparking.solid.clean.infraestructura.oracle.ValetDAO;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class AdministratorController implements Initializable {
@@ -25,7 +21,6 @@ public class AdministratorController implements Initializable {
     public TextField txtValetName;
     public ComboBox<String> cbTypeDoc;
     public TextField txtDocNum;
-    public ImageView imageValet;
     public TextField txtAge;
     public TextField txtExp;
     public Button btnRegister;
@@ -33,8 +28,8 @@ public class AdministratorController implements Initializable {
 
     private boolean accepted = false;
 
-    private Administrator valets = new Administrator();
-    private AssignValet assign = new AssignValet();
+    private final Administrator valets = new Administrator();
+    private final AssignValet assign = new AssignValet();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -71,7 +66,7 @@ public class AdministratorController implements Initializable {
                              assign.getValets().add(valet);
 
 
-                            if(valets.insertValet(valet) && accepted == true){
+                            if(valets.insertValet(valet) && accepted){
 
                                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                                 alert.setHeaderText(null);

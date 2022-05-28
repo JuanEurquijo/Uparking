@@ -1,6 +1,5 @@
 package entrega2.co.uparking.solid.clean.infraestructura.oracle;
 
-import entrega1.model.Cuenta;
 import entrega2.co.uparking.solid.clean.aplicacion.ports.Infra.persistencia.IValetDAO;
 import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
 

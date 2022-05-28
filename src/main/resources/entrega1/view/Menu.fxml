@@ -15,14 +15,14 @@
             <children>
                 <ImageView fitHeight="168.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@logo-upark.png" />
+                        <Image url="@icons/logo-upark.png" />
                     </image>
                 </ImageView>
                 <Button alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
                     <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@home.png" />
+                        <Image url="@icons/home.png" />
                      </image></ImageView>
                     </graphic>
                 </Button>
@@ -30,32 +30,30 @@
                     <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@valet.png" />
+                        <Image url="@icons/valet.png" />
                      </image></ImageView>
                     </graphic>
                 </Button>
-            <Button fx:id="btnAdmin" mnemonicParsing="false" onAction="#EnterAdmin" prefHeight="30.0" prefWidth="176.0" style="-fx-background-color: transparent;" text="Admin" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnAdmin" mnemonicParsing="false" onAction="#EnterAdmin" prefHeight="30.0" prefWidth="176.0" style="-fx-background-color: transparent;" text="Admin" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@admin.png" />
+                        <Image url="@icons/admin.png" />
                      </image>
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
                      </cursor></ImageView>
                </graphic>
             </Button>
-                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="183.0" style="-fx-background-color: transparent;" text="Ubicación" textAlignment="RIGHT" textFill="WHITE">
-                    <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="btnLocation" mnemonicParsing="false" prefHeight="36.0" prefWidth="172.0" style="-fx-background-color: transparent;" text="Ubicación" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@location.png" />
-                     </image></ImageView>
-                    </graphic>
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
-                </Button>
+                        <Image url="@icons/location.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             </children>
         </VBox>
         <Label layoutX="366.0" layoutY="43.0" prefHeight="35.0" prefWidth="72.0" text="Upark">

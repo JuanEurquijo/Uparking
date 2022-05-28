@@ -2,22 +2,20 @@ package entrega2.co.uparking.solid.clean.aplicacion.agregados;
 
 
 
-import entrega1.controller.InicioSesionController;
 import entrega1.model.Cuenta;
 import entrega2.co.uparking.solid.clean.entidades.entities.AssignValet;
+import entrega2.co.uparking.solid.clean.entidades.entities.ValetParking;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MenuController {
 
@@ -27,6 +25,8 @@ public class MenuController {
     public Button btnAdmin;
 
     MenuController stage2;
+
+    ShowValetController showValet;
     Cuenta user;
 
 
@@ -44,15 +44,19 @@ public class MenuController {
 
 
     @FXML
-    public void createNewService(ActionEvent actionEvent) {
+    public void createNewService(ActionEvent actionEvent) throws IOException {
 
+        ShowValetController showValet = new ShowValetController();
         AssignValet valet = new AssignValet();
-        valet.associateValet(this.user);
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setHeaderText(null);
-        alert.setTitle("Información");
-        alert.setContentText("¡Se ha asignado un nuevo valet!");
-        alert.showAndWait();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/entrega1/view/ShowValetAssigned.fxml"));
+        Scene scene = new Scene(loader.load());
+        ShowValetController controlador = (ShowValetController) loader.getController();
+        controlador.showAssignment(showValet, valet.associateValet(this.user));
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+
 
     }
 
